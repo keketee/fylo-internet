@@ -17,16 +17,27 @@ ul {
 }
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background-image: url(../assets/bg-mobile.png);
+  background-repeat: no-repeat;
 }
-.img-mobile {
-  position: relative;
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(../assets/bg-desktop.png);
+  }
 }
+
 .main {
   position: absolute;
-  content: "";
-  top: 130px;
+  content: '';
+  top: 150px;
   left: 25px;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .first-box {
   display: flex;
@@ -65,6 +76,16 @@ body {
   padding: 32px 32px 52px;
   margin-top: 16px;
 }
+@media screen and (min-width: 768px) {
+  .second-box {
+    width: 540px;
+    height: 154px;
+    position: absolute;
+    content: '';
+    left: 350px;
+    top: 30px;
+  }
+}
 .text {
   color: #dbd9ff;
   font-size: 14px;
@@ -79,16 +100,23 @@ body {
 }
 .bar {
   position: absolute;
-  content: "";
+  content: '';
   top: 64px;
   width: 262px;
   height: 20px;
   background-color: #0c122c;
   border-radius: 10px;
 }
+@media screen and (min-width: 768px) {
+  .bar {
+    width: 459px;
+    height: 20px;
+  }
+}
+
 .color-bar {
   position: absolute;
-  content: "";
+  content: '';
   top: 3px;
   left: 3px;
   width: 193px;
@@ -96,9 +124,15 @@ body {
   background-image: linear-gradient(to right, #ffa197, #ff4a95);
   border-radius: 8px;
 }
+@media screen and (min-width: 768px) {
+  .color-bar {
+    width: 339px;
+    height: 14px;
+  }
+}
 .final-bar {
   position: absolute;
-  content: "";
+  content: '';
   top: 2px;
   left: 180px;
   width: 10px;
@@ -106,9 +140,17 @@ body {
   background-color: white;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .final-bar {
+    position: absolute;
+    content: '';
+    left: 325px;
+  }
+}
+
 .box-gigas {
   position: absolute;
-  content: "";
+  content: '';
   top: 90px;
   width: 262px;
   height: 14px;
@@ -122,7 +164,7 @@ body {
 }
 .footer {
   position: absolute;
-  content: "";
+  content: '';
   top: 120px;
   left: 70px;
   width: 179px;
@@ -131,6 +173,26 @@ body {
   border-radius: 10px;
   padding: 16px 24px;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    position: absolute;
+    content: '';
+    left: 320px;
+    top: -50px;
+    border-radius: 10px 10px 0px 10px;
+  }
+}
+.footer::after {
+  position: absolute;
+  content: '';
+  width: 23px;
+  height: 23px;
+
+  left: 156px;
+  top: 70px;
+  background-image: linear-gradient(to bottom left, white 50%, transparent 50%);
+}
+
 .number-footer {
   color: #0c122c;
   font-size: 40px;
